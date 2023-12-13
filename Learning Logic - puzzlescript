@@ -1,0 +1,541 @@
+title Learning Logic
+author Nick Nadolski
+
+========
+OBJECTS
+========
+
+Background
+green
+
+WireH
+green darkred
+00000
+00000
+11111
+00000
+00000
+
+WireV
+green darkred
+00100
+00100
+00100
+00100
+00100
+
+WireTL
+green darkred
+00000
+00000
+00111
+00100
+00100
+
+WireTR
+green darkred
+00000
+00000
+11100
+00100
+00100
+
+WireBL
+green darkred
+00100
+00100
+00111
+00000
+00000
+
+WireBR
+green darkred
+00100
+00100
+11100
+00000
+00000
+
+Target1
+white
+
+Target2
+white
+
+Target3
+white
+
+Target4
+white
+
+Target5
+white
+
+Target6
+white
+
+Target7
+white
+
+Target8
+white
+
+Target9
+white
+
+Wall
+brown
+
+Player
+blue
+
+And
+orange black
+11011
+10101
+10001
+10101
+10101
+
+Or
+yellow black
+11011
+10101
+10101
+10101
+11011
+
+Nand
+purple black
+01110
+00110
+01010
+01100
+01110
+
+Xor
+pink black
+01110
+10101
+11011
+10101
+01110
+
+On
+lightgreen black
+11011
+10011
+11011
+11011
+10001
+
+Off
+red black
+10001
+01100
+01010
+00110
+10001
+
+Check
+lightgreen black
+11111
+11110
+11101
+01011
+10111
+
+Ex
+red black
+01110
+10101
+11011
+10101
+01110
+
+Gate1
+black
+0.0.0
+.0.0.
+0.0.0
+.0.0.
+0.0.0
+
+Gate2
+black
+0.0.0
+.0.0.
+0.0.0
+.0.0.
+0.0.0
+
+Gate3
+black
+0.0.0
+.0.0.
+0.0.0
+.0.0.
+0.0.0
+
+Gate4
+black
+0.0.0
+.0.0.
+0.0.0
+.0.0.
+0.0.0
+
+Gate5
+black
+0.0.0
+.0.0.
+0.0.0
+.0.0.
+0.0.0
+
+Gate6
+black
+0.0.0
+.0.0.
+0.0.0
+.0.0.
+0.0.0
+
+Gate7
+black
+0.0.0
+.0.0.
+0.0.0
+.0.0.
+0.0.0
+
+Gate8
+black
+0.0.0
+.0.0.
+0.0.0
+.0.0.
+0.0.0
+
+=======
+LEGEND
+=======
+
+. = Background
+W = Wall
+P = Player
+
+g = Target1
+h = Target2
+j = Target3
+k = Target4
+l = Target5
+; = Target6
+: = Target7
+' = Target8
+" = Target9
+
+A = And
+O = Or
+N = Nand
+X = Xor
+
+T = On
+F = Off
+
+C = Check
+E = Ex
+
+1 = Gate1
+2 = Gate2
+3 = Gate3
+4 = Gate4
+5 = Gate5
+6 = Gate6
+7 = Gate7
+8 = Gate8
+
+! = WireH
+@ = WireV
+# = WireTL
+$ = WireTR
+% = WireBL
+& = WireBR
+
+=======
+SOUNDS
+=======
+
+sfx0 123013
+sfx1 123456
+
+================
+COLLISIONLAYERS
+================
+
+Background
+WireH, WireV, WireTL, WireTR, WireBL, WireBR
+Target1, Target2, Target3, Target4, Target5, Target6, Target7, Target8, Target9, Gate1, Gate2, Gate3, Gate4, Gate5, Gate6, Gate7, Gate8
+Wall, On, Off, Check, Ex, And, Or, Nand, Xor
+Player
+
+======
+RULES
+======
+
+[ > Player | And ] -> [ > Player | > And ]
+[ > Player | Or ] -> [ > Player | > Or ]
+[ > Player | Nand ] -> [ > Player | > Nand ]
+[ > Player | Xor ] -> [ > Player | > Xor ]
+
+
+orthogonal [ On | Or | On ] -> [ On | Check | On ] sfx0
+orthogonal [ Off | Or | On ] -> [ Off | Check | On ] sfx0
+orthogonal [ On | Or | Off ] -> [ On | Check | Off ] sfx0
+orthogonal [ Off | Or | Off ] -> [ Off | Ex | Off ] sfx1
+
+orthogonal [ On | And | On ] -> [ On | Check | On ] sfx0
+orthogonal [ Off | And | On ] -> [ Off | Ex | On ] sfx1
+orthogonal [ On | And | Off ] -> [ On | Ex | Off ] sfx1
+orthogonal [ Off | And | Off ] -> [ Off | Ex | Off ] sfx1
+
+orthogonal [ On | Nand | On ] -> [ On | Ex | On ] sfx1
+orthogonal [ Off | Nand | On ] -> [ Off | Ex | On ] sfx1
+orthogonal [ On | Nand | Off ] -> [ On | Ex | Off ] sfx1
+orthogonal [ Off | Nand | Off ] -> [ Off | Check | Off ] sfx0
+
+orthogonal [ On | Xor | On ] -> [ On | Ex | On ] sfx1
+orthogonal [ Off | Xor | On ] -> [ Off | Check | On ] sfx0
+orthogonal [ On | Xor | Off ] -> [ On | Check | Off ] sfx0
+orthogonal [ Off | Xor | Off ] -> [ Off | Ex | Off ] sfx1
+
+
+[ Check Target1 ] [ Gate1 ] -> [ Check . ] [ On ]
+[ Check Target2 ] [ Gate2 ] -> [ Check . ] [ On ]
+[ Check Target3 ] [ Gate3 ] -> [ Check . ] [ On ]
+[ Check Target4 ] [ Gate4 ] -> [ Check . ] [ On ]
+[ Check Target5 ] [ Gate5 ] -> [ Check . ] [ On ]
+[ Check Target6 ] [ Gate6 ] -> [ Check . ] [ On ]
+[ Check Target7 ] [ Gate7 ] -> [ Check . ] [ On ]
+[ Check Target8 ] [ Gate8 ] -> [ Check . ] [ On ]
+
+[ Ex Target1 ] [ Gate1 ] -> [ Ex . ] [ Off ]
+[ Ex Target2 ] [ Gate2 ] -> [ Ex . ] [ Off ]
+[ Ex Target3 ] [ Gate3 ] -> [ Ex . ] [ Off ]
+[ Ex Target4 ] [ Gate4 ] -> [ Ex . ] [ Off ]
+[ Ex Target5 ] [ Gate5 ] -> [ Ex . ] [ Off ]
+[ Ex Target6 ] [ Gate6 ] -> [ Ex . ] [ Off ]
+[ Ex Target7 ] [ Gate7 ] -> [ Ex . ] [ Off ]
+[ Ex Target8 ] [ Gate8 ] -> [ Ex . ] [ Off ]
+
+
+[ Check Target1 ] -> [ Check . ]
+[ Check Target2 ] -> [ Check . ]
+[ Check Target3 ] -> [ Check . ]
+[ Check Target4 ] -> [ Check . ]
+[ Check Target5 ] -> [ Check . ]
+[ Check Target6 ] -> [ Check . ]
+[ Check Target7 ] -> [ Check . ]
+[ Check Target8 ] -> [ Check . ]
+
+[ Ex Target1 ] -> [ Ex . ]
+[ Ex Target2 ] -> [ Ex . ]
+[ Ex Target3 ] -> [ Ex . ]
+[ Ex Target4 ] -> [ Ex . ]
+[ Ex Target5 ] -> [ Ex . ]
+[ Ex Target6 ] -> [ Ex . ]
+[ Ex Target7 ] -> [ Ex . ]
+[ Ex Target8 ] -> [ Ex . ]
+
+==============
+WINCONDITIONS
+==============
+
+no Target1
+no Target2
+no Target3
+no Target4
+no Target5
+no Target6
+no Target7
+no Target8
+all Target9 on Check
+
+=======
+LEVELS
+=======
+
+MESSAGE Level 1: AND Gates
+MESSAGE AND Gates output True if both input values are 1
+WWWWW
+WT"TW
+W.A.W
+W.P.W
+WWWWW
+
+MESSAGE Level 2: AND Gate Practice
+WWWWWWWWWW
+WT"T..TgFW
+W.A....A.W
+W...P....W
+W.A....A.W
+WFhT..FjFW
+WWWWWWWWWW
+
+MESSAGE Level 3: OR Gates
+MESSAGE OR Gates output True if at least one of the input values are 1
+WWWWW
+WT"FW
+W.O.W
+W.P.W
+WWWWW
+
+MESSAGE Level 4: OR Gate Practice
+WWWWWWWWWW
+WT"T..TgFW
+W.O....O.W
+W...P....W
+W.O....O.W
+WFhT..FjFW
+WWWWWWWWWW
+
+MESSAGE Level 5: Wires
+MESSAGE Wires will connect the previous output into the next input of a gate. Be careful where you place your ANDs and ORs!
+WWWWWWWWWWW
+WTgF...FhFW
+W.@.....@.W
+W.%!1"2!&.W
+W.........W
+W..P.A....W
+W.......O.W
+W..O......W
+W.........W
+WWWWWWWWWWW
+
+MESSAGE Level 6: More Wires
+WWWWWWWWWWW
+WTgF...FhFW
+W.@..A..@.W
+W.%!1j2!&.W
+W.A..@..O.W
+W..P.%!3..W
+WT...O."..W
+Wk!!!!!4..W
+WF..O.....W
+WWWWWWWWWWW
+
+MESSAGE Level 7: NAND Gates
+MESSAGE NAND Gates output True if both input values are 0
+WWWWW
+WF"FW
+W.N.W
+W.P.W
+WWWWW
+
+MESSAGE Level 8: NAND Gate Practice
+WWWWWWWWWW
+WTgT..ThFW
+W.N....N.W
+W...P....W
+W.N....N.W
+WFjT..F"FW
+WWWWWWWWWW
+
+MESSAGE Level 9: XOR Gates
+MESSAGE XOR Gates output True if both of the input values are opposite
+WWWWW
+WT"FW
+W.X.W
+W.P.W
+WWWWW
+
+MESSAGE Level 10: XOR Gate Practice
+WWWWWWWWWW
+WTgT..T"FW
+W.X....X.W
+W...P....W
+W.X....X.W
+WFhT..FjFW
+WWWWWWWWWW
+
+MESSAGE Level 11: NANDs and XORs
+WWWWWWWWWWW
+WTgF...FhFW
+W.@.....@.W
+W.%!1"2!&.W
+W.........W
+W..P.N....W
+W.......N.W
+W..X......W
+W.........W
+WWWWWWWWWWW
+
+MESSAGE Level 12: Logic Challenge 1
+WWWWWWWWWWWWWWW
+WT..N.....X..FW
+Wg!!!1j2!!!!!hW
+WT.O..@..#!!$FW
+W...A.%!3;5.@.W
+W.A.......@.@.W
+W....#!!!!&.@.W
+W.N.4lF.....@.W
+W...@...N...@.W
+WT..@.....T:6.W
+Wk!!&..X...@..W
+WF....O....@..W
+W.#!!!!!!8"7..W
+WF'F......P...W
+WWWWWWWWWWWWWWW
+
+MESSAGE Level 13: Logic Challenge 2
+WWWWWWWWWWWWWWW
+WT..........P.W
+Wk!!$.N.#!!8..W
+WF..@...@.."..W
+W...4...@..T..W
+W...;!!6'F..N.W
+WF..3...A.O...W
+Wj!!&.......X.W
+WF...#!!5:T...W
+W.N..@.X.%$...W
+W.#!1l2$..@...W
+W.@....@..7"T.W
+WTgF..ThT..A..W
+W...X....O....W
+WWWWWWWWWWWWWWW
+
+MESSAGE Level 14: Logic Challenge 3
+WWWWWWWWWWWWWWW
+WTgF..FhF....TW
+W.@..O.@..#!!jW
+W.%1kF.%2l3..TW
+W.X.@.N..@.A..W
+W...@....@....W
+W.A.4:T..@..O.W
+W....@...@....W
+W.P..@...%!5..W
+W....7"6!!!;..W
+W..A....X..F..W
+WX...F"8!!!!$.W
+W........O..@.W
+WT"T...N...T'FW
+WWWWWWWWWWWWWWW
+
+MESSAGE Level 15: Logic Challenge 4
+WWWWWWWWWWWWWWW
+W.A.O....X.N..W
+W.....T.......W
+WTh1!!g..TjF..W
+W.@.O.F...@...W
+W.@.....P.@.X.W
+W.%!!2kF..3...W
+W..N..@...l!$.W
+W.....%!!!4.@.W
+W8"F........@.W
+W@....A.T;5!&.W
+W@.F:F...@....W
+W%!'@....@..O.W
+W..T%!!7"6.A..W
+WWWWWWWWWWWWWWW
+
+MESSAGE Thanks for playing!
