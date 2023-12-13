@@ -273,6 +273,8 @@ SOUNDS
 
 sfx0 123013
 sfx1 123456
+sfx2 21839108
+sfx3 98071713
 
 ================
 COLLISIONLAYERS
@@ -287,7 +289,6 @@ Player
 ======
 RULES
 ======
-
 
 orthogonal [ On | Or | On ] -> [ On | Check | On ] sfx0
 orthogonal [ Off | Or | On ] -> [ Off | Check | On ] sfx0
@@ -337,6 +338,7 @@ orthogonal [ Off | Xor | Off ] -> [ Off | Ex | Off ] sfx1
 [ Check Target6 ] -> [ Check . ]
 [ Check Target7 ] -> [ Check . ]
 [ Check Target8 ] -> [ Check . ]
+[ Check Target9 ] -> [ Check . ] sfx3
 
 [ Ex Target1 ] -> [ Ex . ]
 [ Ex Target2 ] -> [ Ex . ]
@@ -346,6 +348,7 @@ orthogonal [ Off | Xor | Off ] -> [ Off | Ex | Off ] sfx1
 [ Ex Target6 ] -> [ Ex . ]
 [ Ex Target7 ] -> [ Ex . ]
 [ Ex Target8 ] -> [ Ex . ]
+[ Ex Target9 ] -> [ Ex Target9 ] sfx2
 
 
 [ > Player | And ] -> [ > Player | > And ]
