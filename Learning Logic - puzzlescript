@@ -132,9 +132,9 @@ lightgreen black
 Off
 red black
 10001
-01100
-01010
-00110
+01110
+01110
+01110
 10001
 
 Check
@@ -469,6 +469,18 @@ W..P.N....W
 W.......N.W
 W..X......W
 W.........W
+WWWWWWWWWWW
+
+MESSAGE Level 12: AND vs NAND
+WWWWWWWWWWW
+WTgT...FhFW
+W.@..A..@.W
+W.%!1j2!&.W
+W.A..@..N.W
+W..P.%!3..W
+WF...N."..W
+Wk!!!!!4..W
+WF..A.....W
 WWWWWWWWWWW
 
 MESSAGE Level 12: Logic Challenge 1
