@@ -283,11 +283,6 @@ Player
 RULES
 ======
 
-[ > Player | And ] -> [ > Player | > And ]
-[ > Player | Or ] -> [ > Player | > Or ]
-[ > Player | Nand ] -> [ > Player | > Nand ]
-[ > Player | Xor ] -> [ > Player | > Xor ]
-
 
 orthogonal [ On | Or | On ] -> [ On | Check | On ] sfx0
 orthogonal [ Off | Or | On ] -> [ Off | Check | On ] sfx0
@@ -346,6 +341,12 @@ orthogonal [ Off | Xor | Off ] -> [ Off | Ex | Off ] sfx1
 [ Ex Target6 ] -> [ Ex . ]
 [ Ex Target7 ] -> [ Ex . ]
 [ Ex Target8 ] -> [ Ex . ]
+
+
+[ > Player | And ] -> [ > Player | > And ]
+[ > Player | Or ] -> [ > Player | > Or ]
+[ > Player | Nand ] -> [ > Player | > Nand ]
+[ > Player | Xor ] -> [ > Player | > Xor ]
 
 ==============
 WINCONDITIONS
@@ -479,10 +480,10 @@ W...A.%!3;5.@.W
 W.A.......@.@.W
 W....#!!!!&.@.W
 W.N.4lF.....@.W
-W...@...N...@.W
-WT..@.....T:6.W
-Wk!!&..X...@..W
-WF....O....@..W
+WT..@...N...@.W
+Wk!!&.....T:6.W
+WF.....X...@..W
+W.....O....@..W
 W.#!!!!!!8"7..W
 WF'F......P...W
 WWWWWWWWWWWWWWW
@@ -500,25 +501,25 @@ WF...#!!5:T...W
 W.N..@.X.%$...W
 W.#!1l2$..@...W
 W.@....@..7"T.W
-WTgF..ThT..A..W
-W...X....O....W
+WTgF...@...A..W
+W...X.ThTO....W
 WWWWWWWWWWWWWWW
 
 MESSAGE Level 14: Logic Challenge 3
 WWWWWWWWWWWWWWW
-WTgF..FhF....TW
-W.@..O.@..#!!jW
-W.%1kF.%2l3..TW
-W.X.@.N..@.A..W
-W...@....@....W
-W.A.4:T..@..O.W
-W....@...@....W
-W.P..@...%!5..W
-W....7"6!!!;..W
-W..A....X..F..W
-WX...F"8!!!!$.W
-W........O..@.W
-WT"T...N...T'FW
+WTgF..FhF.A..TW
+W.@..O.@...#!jW
+WX@....@...@.TW
+W.%1kFN%!2l3..W
+W..#&.....@...W
+W.A@......@.O.W
+W..4:T....@...W
+W.P.@.....%5..W
+W...@..#!!!;..W
+W..A%7"6X..F..W
+WX........O...W
+W...N..#!!!!$.W
+WT"T..F"8..T'FW
 WWWWWWWWWWWWWWW
 
 MESSAGE Level 15: Logic Challenge 4
@@ -530,12 +531,12 @@ W.@.O.F...@...W
 W.@.....P.@.X.W
 W.%!!2kF..3...W
 W..N..@...l!$.W
-W.....%!!!4.@.W
-W8"F........@.W
-W@....A.T;5!&.W
-W@.F:F...@....W
-W%!'@....@..O.W
-W..T%!!7"6.A..W
+W8"F..%!!!4.@.W
+W@..........@.W
+W@....A..T;5&.W
+W@.F:F..A.@...W
+W%!'@.....@.O.W
+W..T%!!7"6&...W
 WWWWWWWWWWWWWWW
 
 MESSAGE Thanks for playing!
