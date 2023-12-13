@@ -348,7 +348,7 @@ orthogonal [ Off | Xor | Off ] -> [ Off | Ex | Off ] sfx1
 [ Ex Target6 ] -> [ Ex . ]
 [ Ex Target7 ] -> [ Ex . ]
 [ Ex Target8 ] -> [ Ex . ]
-[ Ex Target9 ] -> [ Ex Target9 ] sfx2
+[ Ex Target9 ] -> sfx2 restart
 
 
 [ > Player | And ] -> [ > Player | > And ]
