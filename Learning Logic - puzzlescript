@@ -81,7 +81,12 @@ Target8
 white
 
 Target9
-white
+white lightgreen
+11111
+10001
+10001
+10001
+11111
 
 Wall
 brown
@@ -366,6 +371,9 @@ all Target9 on Check
 LEVELS
 =======
 
+MESSAGE Welcome to Learning Logic! In this game, you will learn how to use various logic gates. To complete each level, the white tiles with green borders must be True. Good luck!
+
+
 MESSAGE Level 1: AND Gates
 MESSAGE AND Gates output True if both input values are 1
 WWWWW
@@ -483,7 +491,7 @@ Wk!!!!!4..W
 WF..A.....W
 WWWWWWWWWWW
 
-MESSAGE Level 12: Logic Challenge 1
+MESSAGE Level 13: Logic Challenge 1
 WWWWWWWWWWWWWWW
 WT..N.....X..FW
 Wg!!!1j2!!!!!hW
@@ -500,7 +508,7 @@ W.#!!!!!!8"7..W
 WF'F......P...W
 WWWWWWWWWWWWWWW
 
-MESSAGE Level 13: Logic Challenge 2
+MESSAGE Level 14: Logic Challenge 2
 WWWWWWWWWWWWWWW
 WT..........P.W
 Wk!!$.N.#!!8..W
@@ -517,7 +525,7 @@ WTgF...@...A..W
 W...X.ThTO....W
 WWWWWWWWWWWWWWW
 
-MESSAGE Level 14: Logic Challenge 3
+MESSAGE Level 15: Logic Challenge 3
 WWWWWWWWWWWWWWW
 WTgF..FhF.A..TW
 W.@..O.@...#!jW
@@ -530,11 +538,11 @@ W.P.@.....%5..W
 W...@..#!!!;..W
 W..A%7"6X..F..W
 WX........O...W
-W...N..#!!!!$.W
+W...N...#!!!$.W
 WT"T..F"8..T'FW
 WWWWWWWWWWWWWWW
 
-MESSAGE Level 15: Logic Challenge 4
+MESSAGE Level 16: Logic Challenge 4
 WWWWWWWWWWWWWWW
 W.A.O....X.N..W
 W.....T.......W
