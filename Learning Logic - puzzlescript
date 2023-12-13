@@ -421,7 +421,7 @@ W..O......W
 W.........W
 WWWWWWWWWWW
 
-MESSAGE Level 6: More Wires
+MESSAGE Level 6: ANDs and ORs
 WWWWWWWWWWW
 WTgF...FhFW
 W.@..A..@.W
@@ -491,7 +491,64 @@ Wk!!!!!4..W
 WF..A.....W
 WWWWWWWWWWW
 
-MESSAGE Level 13: Logic Challenge 1
+MESSAGE Level 13: OR vs XOR
+WWWWWWWWWWW
+WTgT...ThFW
+W.@..X..@.W
+W.%!1j2!&.W
+W.O..@..X.W
+W..P.%!3..W
+WF...X."..W
+Wk!!!!!4..W
+WT..O.....W
+WWWWWWWWWWW
+
+MESSAGE Level 14: Logic Practice 1
+WWWWWWWWWWWWW
+WTCT..FET..TW
+W.@.N..@.#!gW
+W.@....@.@.FW
+W.%ThF!&.@..W
+W...@....@..W
+W.X.%!!2"1..W
+W....A....A.W
+W.F.....O...W
+W.E!!FjT..P.W
+W.F...@.....W
+W.....%!3"F.W
+WWWWWWWWWWWWW
+
+MESSAGE Level 15: Logic Practice 2
+WWWWWWWWWWWWW
+W...........W
+W.FCF..TET..W
+W..@.N..@...W
+W..@....@.N.W
+W..%!TgF&...W
+W.....@...O.W
+W.X.P.1hF...W
+W......@....W
+W..Tj2!&...FW
+W...%!!3"4!kW
+W..A.......FW
+WWWWWWWWWWWWW
+
+MESSAGE Level 16: Logic Practice 3
+WWWWWWWWWWWWW
+W.TjF..A....W
+W..@........W
+WO.@......X.W
+W..3k2!$....W
+W...@..@....W
+W...@.Th1!$.W
+WF"4&.....@.W
+W......P..@.W
+W.N...#!!FgFW
+W.....@.....W
+W..O.TET....W
+WWWWWWWWWWWWW
+
+MESSAGE Level 17: Logic Challenge 1
 WWWWWWWWWWWWWWW
 WT..N.....X..FW
 Wg!!!1j2!!!!!hW
@@ -508,7 +565,7 @@ W.#!!!!!!8"7..W
 WF'F......P...W
 WWWWWWWWWWWWWWW
 
-MESSAGE Level 14: Logic Challenge 2
+MESSAGE Level 18: Logic Challenge 2
 WWWWWWWWWWWWWWW
 WT..........P.W
 Wk!!$.N.#!!8..W
@@ -525,7 +582,7 @@ WTgF...@...A..W
 W...X.ThTO....W
 WWWWWWWWWWWWWWW
 
-MESSAGE Level 15: Logic Challenge 3
+MESSAGE Level 19: Logic Challenge 3
 WWWWWWWWWWWWWWW
 WTgF..FhF.A..TW
 W.@..O.@...#!jW
@@ -542,7 +599,7 @@ W...N...#!!!$.W
 WT"T..F"8..T'FW
 WWWWWWWWWWWWWWW
 
-MESSAGE Level 16: Logic Challenge 4
+MESSAGE Level 20: Logic Challenge 4
 WWWWWWWWWWWWWWW
 W.A.O....X.N..W
 W.....T.......W
