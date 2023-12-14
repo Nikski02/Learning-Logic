@@ -301,8 +301,8 @@ orthogonal [ On | And | Off ] -> [ On | Ex | Off ] sfx1
 orthogonal [ Off | And | Off ] -> [ Off | Ex | Off ] sfx1
 
 orthogonal [ On | Nand | On ] -> [ On | Ex | On ] sfx1
-orthogonal [ Off | Nand | On ] -> [ Off | Ex | On ] sfx1
-orthogonal [ On | Nand | Off ] -> [ On | Ex | Off ] sfx1
+orthogonal [ Off | Nand | On ] -> [ Off | Check | On ] sfx0
+orthogonal [ On | Nand | Off ] -> [ On | Check | Off ] sfx0
 orthogonal [ Off | Nand | Off ] -> [ Off | Check | Off ] sfx0
 
 orthogonal [ On | Xor | On ] -> [ On | Ex | On ] sfx1
@@ -437,7 +437,7 @@ WF..O.....W
 WWWWWWWWWWW
 
 MESSAGE Level 7: NAND Gates
-MESSAGE NAND Gates output True if both input values are 0
+MESSAGE NAND Gates output True if both input values are not 1
 WWWWW
 WF"FW
 W.N.W
